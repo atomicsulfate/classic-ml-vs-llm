@@ -1,0 +1,4 @@
+.github/
+.hf_runs/
+.venv/
+*.pdf
