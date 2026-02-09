@@ -13,7 +13,7 @@ dependencies:
   - matplotlib
   - seaborn
   - pytorch
-  - cpuonly
+  - pytorch-cuda=12.4
   - transformers>=4.40
   - datasets>=2.18
   - accelerate>=0.30
@@ -22,3 +22,4 @@ dependencies:
   - rich
   - pip:
       - "tokenizers>=0.15"
+      - "python-dotenv>=1.0"

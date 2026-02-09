@@ -2,3 +2,4 @@
 .hf_runs/
 .venv/
 *.pdf
+.env

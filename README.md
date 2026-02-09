@@ -73,9 +73,32 @@ Data loading notes:
 The notebook uses Hugging Face `transformers` for local inference.
 
 - **First run may download a model**, which can take time.
+- Models are cached locally by HuggingFace in `~/.cache/huggingface/hub/`.
 - If downloads are blocked/unavailable, the notebook should handle it gracefully (e.g., skip LLM evaluation and print clear instructions).
 
 If you want to pre-download models (optional), run the relevant model-loading cell once while online.
+
+### Hugging Face Token (for gated models)
+
+Some models like **Llama** require authentication. To use them:
+
+1. Copy the example env file:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+2. Edit `.env` and add your Hugging Face token:
+
+   ```
+   HF_TOKEN=hf_your_token_here
+   ```
+
+3. Get your token from: https://huggingface.co/settings/tokens
+
+**Note:** The `.env` file is gitignored and should never be committed.
+
+If no token is provided, gated models (like Llama) will be skipped automatically.
 
 ---
 
